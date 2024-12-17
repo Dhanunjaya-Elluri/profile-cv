@@ -13,7 +13,7 @@ import './App.css';
 function App() {
   return (
     <ThemeProvider>
-      <Router>
+      <Router basename="/profile-cv">
         <div className="app">
           <Navbar />
           <main className="main-content">
