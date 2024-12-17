@@ -31,7 +31,7 @@ npm install
    ```bash
    npm run dev
    ```
-    
+
     The site will be available at `http://localhost:5173`
 
 ## Deploying to GitHub Pages

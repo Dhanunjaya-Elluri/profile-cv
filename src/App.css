@@ -3,12 +3,12 @@
   --text: #1a1a1a;
   --text-secondary: #666;
   --text-light: #757575;
-  --accent: #007AFF;
+  --accent: #007aff;
   --nav-bg: rgba(255, 255, 255, 0.95);
   --border: rgba(0, 0, 0, 0.1);
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --background: #1a1a1a;
   --text: #ffffff;
   --text-secondary: #a0a0a0;
@@ -22,12 +22,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: var(--background);
   color: var(--text);
   line-height: 1.6;
@@ -98,7 +100,7 @@ body {
 }
 
 .navbar a.active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 1.5rem;
@@ -121,7 +123,9 @@ body {
   font-size: 1.4rem;
   padding: 0.75rem;
   opacity: 0.7;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .theme-toggle:hover {
@@ -242,11 +246,11 @@ h2 {
   .main-content {
     padding: 0 3rem;
   }
-  
+
   .navbar {
     padding: 0.5rem 3rem;
   }
-  
+
   .theme-toggle {
     right: 3rem;
   }
@@ -260,11 +264,11 @@ h2 {
   .main-content {
     padding: 0 2rem;
   }
-  
+
   .navbar {
     padding: 0.5rem 2rem;
   }
-  
+
   .navbar a {
     font-size: 1rem;
     padding: 0.6rem 1rem;
@@ -283,7 +287,7 @@ h2 {
   .social-links {
     gap: 1rem;
   }
-  
+
   .social-links a {
     font-size: 2.2rem;
   }
@@ -293,11 +297,11 @@ h2 {
   .main-content {
     padding: 0 1.5rem;
   }
-  
+
   .navbar {
     padding: 0.5rem 1.5rem;
   }
-  
+
   .navbar a {
     font-size: 0.95rem;
     padding: 0.5rem 0.75rem;
@@ -306,7 +310,7 @@ h2 {
   .theme-toggle {
     right: 1.5rem;
   }
-} 
+}
 
 /* Update profile styles */
 .profile-right {
@@ -354,7 +358,7 @@ h2 {
   .social-links {
     gap: 1rem;
   }
-  
+
   .social-links a {
     font-size: 2.2rem;
   }
@@ -364,11 +368,11 @@ h2 {
   .social-links {
     gap: 0.8rem;
   }
-  
+
   .social-links a {
     font-size: 2rem;
   }
-} 
+}
 
 /* Experience page styles */
 .experience-container {
@@ -406,7 +410,7 @@ h2 {
 }
 
 .timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 1rem;
   top: 0;
@@ -511,7 +515,7 @@ h2 {
   .right-section {
     gap: 3rem;
   }
-} 
+}
 
 /* Skills section styles */
 .skills-section {
@@ -572,7 +576,7 @@ h2 {
   .skill-icon {
     font-size: 1.3rem;
   }
-} 
+}
 
 /* Resume download button styles */
 .resume-download {
@@ -619,12 +623,12 @@ h2 {
     justify-content: center;
     margin-bottom: 1.5rem;
   }
-  
+
   .download-button {
     padding: 0.6rem 1.2rem;
     font-size: 0.95rem;
   }
-} 
+}
 
 /* Projects page styles */
 .projects-container {
@@ -736,7 +740,7 @@ h2 {
   .project-card {
     padding: 1.5rem;
   }
-} 
+}
 
 .project-icon-container img.project-icon {
   width: 100%;
@@ -1068,7 +1072,7 @@ h2 {
 /* Blog post navigation styles */
 .post-navigation {
   display: grid;
-  grid-template-columns: 1fr 1fr;  /* Two equal columns */
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
   gap: 2rem;
   margin-top: 4rem;
 }
@@ -1082,7 +1086,7 @@ h2 {
   border: 1px solid var(--border);
   border-radius: 8px;
   transition: all 0.2s ease;
-  min-height: 100px;  /* Ensure consistent height */
+  min-height: 100px; /* Ensure consistent height */
 }
 
 .nav-link:hover {
@@ -1101,7 +1105,7 @@ h2 {
 .nav-content {
   display: flex;
   flex-direction: column;
-  max-width: 300px;  /* Limit text width */
+  max-width: 300px; /* Limit text width */
 }
 
 .nav-content span {
@@ -1133,7 +1137,7 @@ h2 {
 /* Responsive styles */
 @media (max-width: 768px) {
   .post-navigation {
-    grid-template-columns: 1fr;  /* Stack on mobile */
+    grid-template-columns: 1fr; /* Stack on mobile */
     gap: 1rem;
   }
 
