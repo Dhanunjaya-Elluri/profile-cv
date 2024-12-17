@@ -18,12 +18,13 @@ function App() {
           <Navbar />
           <main className="main-content">
             <Routes>
+              <Route path="/" element={<Navigate to="/bio" replace />} />
               <Route path="/bio" element={<Profile />} />
               <Route path="/experience" element={<Experience />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/" element={<Navigate to="/bio" replace />} />
+              <Route path="*" element={<Navigate to="/bio" replace />} />
             </Routes>
           </main>
           <Footer />

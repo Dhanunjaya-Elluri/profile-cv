@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="nav-links">
           <Link 
             to="/bio" 
-            className={location.pathname === '/bio' ? 'active' : ''}
+            className={location.pathname === '/bio' || location.pathname === '/' ? 'active' : ''}
           >
             Bio
           </Link>
