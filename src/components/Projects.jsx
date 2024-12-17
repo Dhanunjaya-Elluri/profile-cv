@@ -36,9 +36,10 @@ const Projects = () => {
       ],
     },
     {
-      title: "Master's Thesis",
+      title: "Transformers for Quantized Time Series Forecasting",
       icon: <img src={tuLogo} alt="TU Logo" className="project-icon" />,
-      description: "Transformers for Quantized Time Series Forecasting",
+      description:
+        "Master's Thesis on Transformers for Quantized Time Series Forecasting",
       githubUrl: "https://github.com/Dhanunjaya-Elluri/master-thesis",
       contributions: [
         "Explored various quantization techniques for time series forecasting like SAX, Kernel-SAX, Quantile methods.",
