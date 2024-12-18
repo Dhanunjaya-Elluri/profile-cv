@@ -1441,3 +1441,226 @@ h2 {
     margin-top: 0.75rem;
   }
 }
+
+/* Testimonials styles */
+.testimonials-container {
+  padding: 2rem 0;
+  position: relative;
+}
+
+.testimonials-grid {
+  display: flex;
+  gap: 2rem;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding: 1rem;
+  margin: 0 4rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  position: relative;
+  scroll-snap-stop: always;
+}
+
+.testimonials-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-card {
+  flex: 0 0 400px;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.testimonial-text-container {
+  position: relative;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.testimonial-text {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  white-space: pre-wrap;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.testimonial-card.expanded {
+  height: auto;
+}
+
+.testimonial-card.expanded .testimonial-text {
+  height: auto;
+}
+
+.read-more-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: linear-gradient(transparent, var(--background));
+  pointer-events: none;
+}
+
+.testimonial-card.expanded .read-more-fade {
+  display: none;
+}
+
+.read-more-button {
+  color: var(--accent);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  margin-top: auto;
+  transition: color 0.2s ease;
+  z-index: 1;
+}
+
+.read-more-button:hover {
+  text-decoration: underline;
+}
+
+.testimonial-footer {
+  margin-top: 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial-date {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.linkedin-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0077b5;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.linkedin-link:hover {
+  color: #005582;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--background);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-button:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+[data-theme="dark"] .scroll-button {
+  background: var(--background);
+  color: var(--text);
+  border-color: var(--border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .scroll-button:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.scroll-button.prev {
+  left: 1rem;
+}
+
+.scroll-button.next {
+  right: 1rem;
+}
+
+/* Hide scroll buttons on mobile */
+@media (max-width: 768px) {
+  .testimonials-grid {
+    margin: 0;
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  .scroll-button {
+    display: none;
+  }
+}
+
+.testimonials-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Add/update testimonial header styles */
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.testimonial-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.testimonial-info h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: var(--text);
+}
+
+.testimonial-role {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin: 0;
+}
