@@ -730,15 +730,38 @@ h2 {
 /* Responsive styles for projects */
 @media (max-width: 768px) {
   .projects-container {
-    padding: 1.5rem 1rem;
+    padding: 1rem;
+  }
+
+  .projects-header {
+    text-align: center;
   }
 
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .project-card {
     padding: 1.5rem;
+  }
+
+  .project-icon-container {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+  }
+
+  .project-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+
+  .project-contributions {
+    font-size: 0.95rem;
   }
 }
 
@@ -835,27 +858,27 @@ h2 {
 /* Responsive styles for blog */
 @media (max-width: 768px) {
   .blog-container {
-    padding: 1.5rem 1rem;
+    padding: 1rem;
   }
 
   .blog-preview {
     grid-template-columns: 1fr;
     gap: 1rem;
+    padding: 1.5rem 0;
   }
 
   .blog-meta {
     text-align: left;
-    padding-right: 0;
     border-right: none;
-    margin-bottom: 0.5rem;
+    padding-right: 0;
   }
 
   .blog-preview h2 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .blog-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 
@@ -1203,5 +1226,218 @@ h2 {
 
   .footer-info {
     align-items: center;
+  }
+}
+
+/* Update Profile styles for mobile */
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column-reverse;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .profile-right {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    gap: 0;
+  }
+
+  .profile-image {
+    margin-bottom: 0;
+  }
+
+  .profile-image img {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .social-links {
+    margin-top: 0.25rem;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wave {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .interests ul {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+/* Update Experience styles for mobile */
+@media (max-width: 768px) {
+  .experience-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .right-section {
+    gap: 2rem;
+  }
+
+  .timeline-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-date {
+    font-size: 0.9rem;
+  }
+
+  .responsibilities ul {
+    padding-left: 1.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-download {
+    padding: 1rem;
+  }
+
+  .download-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Update Blog styles for mobile */
+@media (max-width: 768px) {
+  .blog-container {
+    padding: 1rem;
+  }
+
+  .blog-preview {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem 0;
+  }
+
+  .blog-meta {
+    text-align: left;
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .blog-preview h2 {
+    font-size: 1.5rem;
+  }
+
+  .blog-description {
+    font-size: 1rem;
+  }
+}
+
+/* Update Blog Post styles for mobile */
+@media (max-width: 768px) {
+  .blog-post-container {
+    padding: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .blog-post-header h1 {
+    font-size: 2rem;
+  }
+
+  .blog-post-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .table-of-contents {
+    display: none;
+  }
+
+  .author-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .author-section .social-links {
+    justify-content: center;
+  }
+}
+
+/* General mobile improvements */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 0;
+  }
+
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+  }
+
+  .navbar a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .theme-toggle {
+    right: 1rem;
+  }
+
+  .footer-content {
+    padding: 0 1rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 375px) {
+  .nav-links {
+    gap: 0.25rem;
+  }
+
+  .navbar a {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .profile-image img {
+    max-width: 200px;
+  }
+
+  .profile-right {
+    gap: 0.75rem;
+  }
+
+  .social-links {
+    margin-top: 0.75rem;
   }
 }
