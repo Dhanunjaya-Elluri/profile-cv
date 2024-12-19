@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
+import { BsSun, BsMoonStars } from "react-icons/bs";
 
 const Navbar = () => {
   const { isDark, toggleTheme } = useTheme();
@@ -45,8 +46,16 @@ const Navbar = () => {
             Blog
           </Link>
         </div>
-        <button className="theme-toggle" onClick={toggleTheme}>
-          {isDark ? "☀️" : "🌙"}
+        <button
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+        >
+          {isDark ? (
+            <BsSun className="theme-icon" />
+          ) : (
+            <BsMoonStars className="theme-icon" />
+          )}
         </button>
       </nav>
     </header>
