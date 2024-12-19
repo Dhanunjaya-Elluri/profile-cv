@@ -2112,3 +2112,26 @@ h2 {
   color: var(--accent);
   transform: translateY(-2px);
 }
+
+/* Profile visits counter */
+.profile-visits {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  background-color: var(--border);
+  border-radius: 9999px;
+}
+
+.visits-icon {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .profile-visits {
+    margin: 1rem auto 0;
+  }
+}

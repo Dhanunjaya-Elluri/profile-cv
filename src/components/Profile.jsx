@@ -1,5 +1,6 @@
 import React from "react";
 import SocialLinks from "./SocialLinks";
+import ProfileVisits from "./ProfileVisits";
 import profileImage from "./images/profile-image.png";
 import {
   FaAward,
@@ -42,6 +43,7 @@ const Profile = () => {
         <div className="intro">
           <span className="wave">👋</span>
           <h1>Hey, I&apos;m Dhanunjaya Elluri</h1>
+          <ProfileVisits />
         </div>
         <h2>
           Machine Learning Engineer crafting AI solutions that are both powerful
