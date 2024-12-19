@@ -18,7 +18,7 @@ const Navbar = () => {
                 : ""
             }
           >
-            Bio
+            About
           </Link>
           <Link
             to="/experience"

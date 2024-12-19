@@ -10,10 +10,7 @@ const Profile = () => {
           <span className="wave">👋</span>
           <h1>Hey, I&apos;m Dhanunjaya Elluri</h1>
         </div>
-        <h2>
-          I&apos;m a Data Scientist and Machine Learning Engineer with a passion
-          for making data useful for humanity.
-        </h2>
+        <h2>Machine Learning Engineer specializing in LLMs and MLOps.</h2>
 
         <p className="current-work">
           Currently, I&apos;m a Machine Learning Engineer at{" "}
@@ -24,16 +21,15 @@ const Profile = () => {
           >
             Validaitor
           </a>{" "}
-          where I&apos;m working on fixing LLMs to make them compliant with EU
-          AI Act.
+          where I develop solutions to make LLMs compliant with the EU AI Act.
         </p>
 
         <div className="interests">
-          <p>My interests include:</p>
+          <p>My expertise includes:</p>
           <ul>
-            <li>Large Language Models</li>
+            <li>Large Language Models & NLP</li>
+            <li>MLOps & Production ML Systems</li>
             <li>Time Series Forecasting</li>
-            <li>MLOps</li>
           </ul>
         </div>
       </div>
