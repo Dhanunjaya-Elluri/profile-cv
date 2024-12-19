@@ -3,7 +3,7 @@ import { FaLinkedin, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import yunus from "./images/yunus.png";
 import mgraf from "./images/mgraf.png";
 import roshan from "./images/roshan.png";
-import gensler from "./images/gensler.jpg";
+import gensler from "./images/Gensler.jpg";
 import aditya from "./images/aditya.png";
 
 const Testimonials = () => {
