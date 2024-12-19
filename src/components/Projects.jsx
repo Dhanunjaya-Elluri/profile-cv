@@ -42,10 +42,9 @@ const Projects = () => {
         "Master's Thesis on Transformers for Quantized Time Series Forecasting",
       githubUrl: "https://github.com/Dhanunjaya-Elluri/master-thesis",
       contributions: [
-        "Explored various quantization techniques for time series forecasting like SAX, Kernel-SAX, Quantile methods.",
-        "Implemented various Transformer models (Informer, Pyraformer, FEDformer, Autoformer, etc.) for the quantized time series forecasting",
-        "Evaluated the performance of the models using popular time series forecasting metrics",
-        "Resulted in a 30% improvement in the performance of the model's training and inference.",
+        "Explored SAX, Kernel-SAX & Quantile methods for time series quantization",
+        "Implemented multiple Transformer variants for time series forecasting",
+        "Achieved 30% performance improvement in training & inference",
       ],
     },
   ];

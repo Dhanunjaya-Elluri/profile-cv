@@ -1450,35 +1450,59 @@ h2 {
 
 .testimonials-grid {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   padding: 1rem;
   margin: 0 4rem;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
   position: relative;
-  scroll-snap-stop: always;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  user-select: none;
 }
 
+/* Hide scrollbar */
 .testimonials-grid::-webkit-scrollbar {
   display: none;
 }
 
 .testimonial-card {
-  flex: 0 0 400px;
+  flex: 0 0 350px;
   background-color: var(--background);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  height: 350px;
+  gap: 0.75rem;
+  height: 300px;
   position: relative;
   overflow: hidden;
-  transition: height 0.3s ease;
+  transition: transform 0.3s ease;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Style cloned cards the same as original cards */
+.clone-card {
+  flex: 0 0 350px;
+}
+
+/* Remove any transition on the grid itself */
+.testimonials-grid {
+  transition: none;
+}
+
+/* Ensure smooth scrolling */
+.testimonials-grid {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure cards maintain their hover state */
+.testimonial-card:hover,
+.clone-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .testimonial-text-container {
@@ -1489,13 +1513,13 @@ h2 {
 
 .testimonial-text {
   position: relative;
-  height: 100px;
+  height: 80px;
   overflow: hidden;
   transition: height 0.3s ease;
   white-space: pre-wrap;
   color: var(--text);
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .testimonial-card.expanded {
@@ -1530,6 +1554,7 @@ h2 {
   margin-top: auto;
   transition: color 0.2s ease;
   z-index: 1;
+  pointer-events: auto;
 }
 
 .read-more-button:hover {
@@ -1561,6 +1586,7 @@ h2 {
   font-size: 0.9rem;
   transition: color 0.2s ease;
   white-space: nowrap;
+  pointer-events: auto;
 }
 
 .linkedin-link:hover {
@@ -1568,61 +1594,28 @@ h2 {
 }
 
 .scroll-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--background);
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  z-index: 1;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: none;
 }
 
-.scroll-button:hover {
-  background: var(--accent);
-  color: white;
-  border-color: var(--accent);
+/* Add hover effect to cards */
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-[data-theme="dark"] .scroll-button {
-  background: var(--background);
-  color: var(--text);
-  border-color: var(--border);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+/* Ensure smooth animation */
+@media (prefers-reduced-motion: no-preference) {
+  .testimonials-grid {
+    transition: none;
+  }
 }
 
-[data-theme="dark"] .scroll-button:hover {
-  background: var(--accent);
-  color: white;
-  border-color: var(--accent);
-}
-
-.scroll-button.prev {
-  left: 1rem;
-}
-
-.scroll-button.next {
-  right: 1rem;
-}
-
-/* Hide scroll buttons on mobile */
+/* Update mobile styles */
 @media (max-width: 768px) {
   .testimonials-grid {
     margin: 0;
     padding: 1rem;
-    overflow-x: auto;
-  }
-
-  .scroll-button {
-    display: none;
+    overflow-x: hidden;
   }
 }
 
@@ -1640,8 +1633,8 @@ h2 {
 }
 
 .testimonial-image {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
@@ -1663,4 +1656,41 @@ h2 {
   color: var(--text-light);
   font-size: 0.9rem;
   margin: 0;
+}
+
+/* Update responsive styles */
+@media (max-width: 1200px) {
+  .testimonials-grid {
+    margin: 0 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    flex: 0 0 300px;
+  }
+  
+  .testimonials-grid {
+    margin: 0;
+    padding: 1rem;
+  }
+}
+
+/* Add transition for smoother card movement */
+.testimonials-grid {
+  transition: transform 0.3s ease-out;
+}
+
+/* Prevent text selection during scrolling */
+.testimonial-card {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Enable pointer events only for interactive elements */
+.read-more-button,
+.linkedin-link {
+  pointer-events: auto;
 }

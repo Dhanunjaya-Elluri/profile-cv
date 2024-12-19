@@ -1,13 +1,15 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { FaLinkedin, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import yunus from "./images/yunus.png";
 import mgraf from "./images/mgraf.png";
 import roshan from "./images/roshan.png";
+import gensler from "./images/gensler.jpg";
 import aditya from "./images/aditya.png";
 
 const Testimonials = () => {
-  const [expandedCards, setExpandedCards] = useState({});
+  const [isPaused, setIsPaused] = useState(false);
   const scrollContainerRef = useRef(null);
+  const [expandedCards, setExpandedCards] = useState({});
   const textRefs = useRef({});
 
   const testimonials = [
@@ -34,7 +36,7 @@ const Testimonials = () => {
         "I especially appreciated his structured way of working, willingness to learn, adherence to best practices and diligence in documenting his work, which made collaboration, especially on long term tasks, with Dhanunjaya a joy. Dhanunjaya was always on top of his communications, so adapting quickly in a fast paced startup environment worked as well as we could imagine.",
       linkedinUrl:
         "https://www.linkedin.com/in/dhanunjaya-elluri/details/recommendations/?detailScreenTabIndex=0",
-      date: "February 2024",
+      date: "November 2024",
     },
     {
       name: "Roshan Amasa",
@@ -47,7 +49,18 @@ const Testimonials = () => {
         "I have no doubt that Dhanunjaya will excel in any role that he takes on in the future. His dedication, expertise, and passion for data science and MLOps make him a valuable addition to any organization. I would highly recommend him to any prospective employer looking for a skilled and knowledgeable data scientist.",
       linkedinUrl:
         "https://www.linkedin.com/in/dhanunjaya-elluri/details/recommendations/?detailScreenTabIndex=0",
-      date: "January 2024",
+      date: "May 2023",
+    },
+    {
+      name: "Dr. Andre Gensler",
+      role: "MLOps Engineer at Munich Re",
+      image: gensler,
+      text:
+        "I am writing to recommend Dhanunjaya Elluri Thimmaraju for any future endeavors he may undertake. I had the pleasure of working more than 6 months with Dhanunjaya on a project to create an inhouse MLOps platform in the insurance space, where I served as the lead software engineer and Dhanunjaya as student intern. I must say that he performed exceptionally well, and his contributions to the project were very valuable.\n\n" +
+        "Throughout his time with us, Dhanunjaya consistently demonstrated his great programming skills, technical knowledge, and eagerness to learn. He proved to be a quick learner and easily adapted to our project's requirements, quickly grasping the scope of the project and delivering quality work within set timelines. His ability to analyze complex problems and develop effective solutions impressed me, and he was never shy to ask questions or seek feedback. Besides his technical expertise, Dhanunjaya was also a great team player, always willing to collaborate with other team members and share his insights. He was respectful, reliable, and communicated effectively, both verbally and in writing. His positive attitude and enthusiasm for the project made him valuable to the team.\n\n" +
+        "Overall, I strongly endorse Dhanunjaya Elluri Thimmaraju for any future positions or opportunities. His technical prowess, exceptional work ethic, and positive attitude make him an ideal candidate for any role requiring technical proficiency, innovation, and strong teamwork skills. Please do not hesitate to contact me if you require further information.",
+      linkedinUrl: "https://de.linkedin.com/in/dr-andr%C3%A9-gensler-11973747",
+      date: "May 2023",
     },
     {
       name: "Aditya Sanivarapu",
@@ -56,7 +69,7 @@ const Testimonials = () => {
       text: "I worked with Dhanunjaya when I was with TCS. I supervised Dhanunjaya when he was first hired into our project and he quickly became one of the most productive people in our team. Your practical approach to problem solving was a great asset to our team. Your constant efforts made our team to achieve goals as a cohesive unit.",
       linkedinUrl:
         "https://www.linkedin.com/in/dhanunjaya-elluri/details/recommendations/?detailScreenTabIndex=0",
-      date: "December 2023",
+      date: "September 2022",
     },
   ];
 
@@ -69,72 +82,59 @@ const Testimonials = () => {
     }));
   };
 
-  const scroll = (direction) => {
-    if (scrollContainerRef.current) {
-      const container = scrollContainerRef.current;
-      const cardWidth = 400;
-      const gap = 32;
-      const scrollAmount = cardWidth + gap;
+  // Auto scroll function
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container || isPaused) return;
 
-      // Get current scroll position
-      const currentScroll = container.scrollLeft;
-      const containerWidth = container.clientWidth;
-      const scrollWidth = container.scrollWidth;
+    const cardWidth = 350;
+    const gap = 24;
+    let animationFrameId;
+    const speed = 1; // Increased speed slightly for visibility
 
-      // Calculate new scroll position
-      let newScrollPosition;
-      if (direction === "right") {
-        // Check if we're at the end
-        if (currentScroll + containerWidth >= scrollWidth) {
-          newScrollPosition = 0; // Loop back to start
-        } else {
-          newScrollPosition = currentScroll + scrollAmount;
-        }
-      } else {
-        // Check if we're at the start
-        if (currentScroll <= 0) {
-          newScrollPosition = scrollWidth - containerWidth; // Loop to end
-        } else {
-          newScrollPosition = currentScroll - scrollAmount;
-        }
+    const animate = () => {
+      if (!container) return;
+
+      // Increment scroll position
+      container.scrollLeft += speed;
+
+      // Check if we need to loop
+      if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+        container.scrollLeft = 0;
       }
 
-      // Ensure scroll position is within bounds
-      newScrollPosition = Math.max(
-        0,
-        Math.min(newScrollPosition, scrollWidth - containerWidth),
-      );
+      animationFrameId = requestAnimationFrame(animate);
+    };
 
-      // Use scrollTo with smooth behavior
-      container.scrollTo({
-        left: newScrollPosition,
-        behavior: "smooth",
-      });
-    }
-  };
+    // Start animation
+    animationFrameId = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+    };
+  }, [isPaused]);
+
+  // Handle hover
+  const handleMouseEnter = () => setIsPaused(true);
+  const handleMouseLeave = () => setIsPaused(false);
 
   return (
     <div className="testimonials-container">
       <h1>Testimonials</h1>
-      <button
-        className="scroll-button prev"
-        onClick={() => scroll("left")}
-        aria-label="Previous testimonials"
+      <div 
+        className="testimonials-grid" 
+        ref={scrollContainerRef}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
-        <FaChevronLeft />
-      </button>
-      <button
-        className="scroll-button next"
-        onClick={() => scroll("right")}
-        aria-label="Next testimonials"
-      >
-        <FaChevronRight />
-      </button>
-      <div className="testimonials-grid" ref={scrollContainerRef}>
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className={`testimonial-card ${expandedCards[index] ? "expanded" : ""}`}
+            className={`testimonial-card ${
+              expandedCards[index] ? "expanded" : ""
+            }`}
           >
             <div className="testimonial-header">
               <img
@@ -152,6 +152,50 @@ const Testimonials = () => {
                 className="testimonial-text"
                 ref={(el) => (textRefs.current[index] = el)}
               >
+                {testimonial.text}
+                {!expandedCards[index] && <div className="read-more-fade" />}
+              </div>
+            </div>
+            <button
+              className="read-more-button"
+              onClick={(e) => toggleCard(index, e)}
+            >
+              {expandedCards[index] ? "Read Less" : "Read More"}
+            </button>
+            <div className="testimonial-footer">
+              <span className="testimonial-date">{testimonial.date}</span>
+              <a
+                href={testimonial.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="linkedin-link"
+              >
+                <FaLinkedin />
+                <span>View on LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        ))}
+        {testimonials.slice(0, 3).map((testimonial, index) => (
+          <div
+            key={`clone-${index}`}
+            className={`testimonial-card clone-card ${
+              expandedCards[index] ? "expanded" : ""
+            }`}
+          >
+            <div className="testimonial-header">
+              <img
+                src={testimonial.image}
+                alt={testimonial.name}
+                className="testimonial-image"
+              />
+              <div className="testimonial-info">
+                <h3>{testimonial.name}</h3>
+                <p className="testimonial-role">{testimonial.role}</p>
+              </div>
+            </div>
+            <div className="testimonial-text-container">
+              <div className="testimonial-text">
                 {testimonial.text}
                 {!expandedCards[index] && <div className="read-more-fade" />}
               </div>
