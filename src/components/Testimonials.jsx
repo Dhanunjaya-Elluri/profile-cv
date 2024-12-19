@@ -99,7 +99,10 @@ const Testimonials = () => {
       container.scrollLeft += speed;
 
       // Check if we need to loop
-      if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+      if (
+        container.scrollLeft >=
+        container.scrollWidth - container.clientWidth
+      ) {
         container.scrollLeft = 0;
       }
 
@@ -123,8 +126,8 @@ const Testimonials = () => {
   return (
     <div className="testimonials-container">
       <h1>Testimonials</h1>
-      <div 
-        className="testimonials-grid" 
+      <div
+        className="testimonials-grid"
         ref={scrollContainerRef}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
