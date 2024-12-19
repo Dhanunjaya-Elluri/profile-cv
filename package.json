@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://dhanunjaya-elluri.github.io/profile-cv/",
+  "homepage": "https://elluri.in",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
