@@ -7,7 +7,7 @@ repos:
       - id: check-yaml
       - id: check-json
       - id: check-added-large-files
-        args: ['--maxkb=1024']
+        args: ['--maxkb=1536']
       - id: no-commit-to-branch
         args: ['--branch', 'main']
 

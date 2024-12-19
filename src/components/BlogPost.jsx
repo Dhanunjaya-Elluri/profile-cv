@@ -2,7 +2,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { FaClock, FaUser, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import SocialLinks from "./SocialLinks";
-import profileImage from "../components/images/profile-image.jpeg";
+import profileImage from "../components/images/profile-image.png";
 
 const blogs = {
   "create-simple-blog": {

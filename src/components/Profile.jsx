@@ -1,6 +1,6 @@
 import React from "react";
 import SocialLinks from "./SocialLinks";
-import profileImage from "./images/profile-image.jpeg"; // Import the image
+import profileImage from "./images/profile-image.png"; // Import the image
 
 const Profile = () => {
   return (
