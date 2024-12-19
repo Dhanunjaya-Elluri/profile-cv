@@ -90,7 +90,7 @@ const Testimonials = () => {
     const cardWidth = 350;
     const gap = 24;
     let animationFrameId;
-    const speed = 1; // Increased speed slightly for visibility
+    const speed = 1.2; // Increased speed slightly for visibility
 
     const animate = () => {
       if (!container) return;
