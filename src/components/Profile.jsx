@@ -41,9 +41,22 @@ const Profile = () => {
     <div className="profile">
       <div className="profile-content">
         <div className="intro">
-          <span className="wave">👋</span>
-          <h1>Hey, I&apos;m Dhanunjaya Elluri</h1>
-          <ProfileVisits />
+          <div className="mobile-profile-image">
+            <img 
+              src={profileImage} 
+              alt="Dhanunjaya Elluri" 
+              loading="eager"
+            />
+          </div>
+          <div className="intro-text">
+            <div className="intro-header">
+              <h1>
+                <span className="wave">👋</span>
+                Hey, I'm Dhanunjaya Elluri
+              </h1>
+              <ProfileVisits />
+            </div>
+          </div>
         </div>
         <h2>
           Machine Learning Engineer crafting AI solutions that are both powerful
@@ -80,7 +93,11 @@ const Profile = () => {
 
       <div className="profile-right">
         <div className="profile-image">
-          <img src={profileImage} alt="Profile" />
+          <img 
+            src={profileImage} 
+            alt="Dhanunjaya Elluri" 
+            loading="eager"
+          />
         </div>
         <SocialLinks />
       </div>
