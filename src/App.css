@@ -2501,3 +2501,81 @@ body.menu-open {
   }
 }
 
+/* Page title spacing */
+.projects-header,
+.experience-container,
+.testimonials-container,
+.blog-container {
+  padding-top: 3rem;
+}
+
+/* Individual page title styles */
+.projects-header h1,
+.experience-container h1,
+.testimonials-container h1,
+.blog-container h1 {
+  margin-bottom: 1.5rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .projects-header,
+  .experience-container,
+  .testimonials-container,
+  .blog-container {
+    padding-top: 2.5rem;
+  }
+
+  .projects-header h1,
+  .experience-container h1,
+  .testimonials-container h1,
+  .blog-container h1 {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 375px) {
+  .projects-header,
+  .experience-container,
+  .testimonials-container,
+  .blog-container {
+    padding-top: 2rem;
+  }
+}
+
+/* Experience page specific styles */
+.experience-container {
+  padding-top: 1rem; /* Reduced from 3rem */
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-top: 2rem; /* Add padding above download button */
+}
+
+.download-cv {
+  margin-top: 1rem; /* Add space above download button */
+}
+
+/* Mobile adjustments for experience page */
+@media (max-width: 768px) {
+  .experience-container {
+    padding-top: 0.5rem; /* Reduced padding for mobile */
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-top: 1.5rem; /* Adjusted for mobile */
+  }
+
+  .download-cv {
+    margin-top: 0.5rem;
+  }
+}
+
