@@ -2384,248 +2384,90 @@ body.menu-open {
 /* Profile mobile styles */
 @media (max-width: 768px) {
   .profile {
-    flex-direction: column;
-    padding: 1rem;
-    gap: 2rem;
+    padding: 3rem 1rem 1rem;
   }
 
   .intro {
-    flex-direction: row;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.4rem;
+    margin-bottom: 1.5rem;
+    display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1.5rem;
   }
 
   .mobile-profile-image {
-    display: block !important; /* Force display on mobile */
-    width: 80px;
-    height: 80px;
+    display: block;
+    width: 100px;
+    height: 100px;
     flex-shrink: 0;
     border-radius: 50%;
     overflow: hidden;
+    border: 2px solid var(--border);
+    background-color: var(--background);
   }
 
   .mobile-profile-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  .profile-right {
-    display: none; /* Hide the desktop profile image on mobile */
+    display: block;
   }
 
   .intro-text {
     flex: 1;
+    min-width: 0; /* Prevents text overflow */
   }
 
-  .intro h1 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-}
-
-/* Desktop profile image styles */
-.mobile-profile-image {
-  display: none; /* Hide on desktop */
-}
-
-.profile-image {
-  width: 300px;
-  height: auto;
-  margin-bottom: 2rem;
-}
-.profile-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-}
-
-/* Wave emoji animation */
-.wave {
-  font-size: 2.8rem;
-  animation: wave 2s infinite;
-  transform-origin: 70% 70%;
-  display: inline-block;
-  line-height: 1;
-  margin-right: 0.5rem;
-  position: relative;
-}
-
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(14deg);
-  }
-  20% {
-    transform: rotate(-8deg);
-  }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-/* Mobile adjustments for wave */
-@media (max-width: 768px) {
-  .wave {
-    font-size: 2rem;
-    transform-origin: 75% 75%;
-    position: static;
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  .intro-text {
+  .intro-header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-  }
-
-  .intro h1 {
-    display: flex;
-    align-items: center;
     gap: 0.5rem;
-    font-size: 1.5rem;
-    line-height: 1.2;
-    margin-bottom: 0.25rem;
-  }
-}
-
-/* Profile right section styles */
-.profile-right {
-  flex: 0 0 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
-
-.profile-image {
-  width: 100%;
-  max-width: 350px;
-  margin: 0 auto;
-}
-
-.profile-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  display: block;
-}
-
-/* Social Links styles */
-.social-links {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-.social-links a {
-  color: var(--text-light);
-  font-size: 2rem;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  display: flex;
-  align-items: center;
-  padding: 0.5rem;
-  border-radius: 50%;
-}
-
-.social-links a:hover {
-  color: var(--accent);
-  transform: translateY(-4px) scale(1.1);
-}
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .profile-right {
-    flex: 0 0 300px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    padding: 0.5rem 2rem;
-  }
-
-  .profile-right {
-    display: none;
-  }
-}
-
-/* Mobile-specific styles */
-@media (max-width: 768px) {
-  .app {
-    padding-top: 5rem;
-  }
-
-  .main-content {
-    padding: 1.5rem 1rem;
-  }
-
-  /* Profile specific mobile adjustments */
-  .profile {
-    padding-top: 2rem;
-    gap: 1.5rem;
-  }
-
-  .intro {
-    padding-top: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .mobile-profile-image {
-    width: 70px;
-    height: 70px;
   }
 
   .intro-text h1 {
     font-size: 1.4rem;
     line-height: 1.3;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
   }
 
   .wave {
-    font-size: 1.8rem;
-    margin-right: 0.3rem;
+    font-size: 1.6rem;
+    margin: 0;
   }
 
-  /* Ensure profile visits counter doesn't cause overflow */
   .profile-visits {
-    margin-top: 0.5rem;
+    align-self: flex-start;
     font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+    background: var(--border);
+    border-radius: 20px;
+  }
+
+  /* Hide desktop profile section */
+  .profile-right {
+    display: none;
   }
 }
 
 /* Extra small devices */
 @media (max-width: 375px) {
-  .main-content {
-    padding: 1rem;
-  }
-
-  .profile {
-    padding-top: 1.5rem;
+  .mobile-profile-image {
+    width: 65px;
+    height: 65px;
   }
 
   .intro-text h1 {
     font-size: 1.2rem;
+  }
+
+  .wave {
+    font-size: 1.4rem;
   }
 }
 
@@ -2634,27 +2476,8 @@ body.menu-open {
   display: none;
 }
 
-/* Mobile Navigation Styles */
+/* Show social links only in mobile menu */
 @media (max-width: 768px) {
-  /* ... other mobile styles ... */
-
-  .nav-links {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 80%;
-    height: 100vh;
-    background-color: var(--nav-bg);
-    flex-direction: column;
-    padding: 5rem 2rem 2rem;
-    gap: 1.5rem;
-    transition: all 0.3s ease-in-out;
-    z-index: 1001;
-    backdrop-filter: blur(10px);
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Show social links only in mobile menu */
   .nav-social-links {
     display: flex;
     gap: 1.2rem;
