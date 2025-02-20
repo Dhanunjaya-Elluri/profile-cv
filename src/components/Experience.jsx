@@ -26,7 +26,7 @@ const Experience = () => {
           <div className="timeline">
             <div className="timeline-item">
               <div className="icon-container">
-                <FaBriefcase className="timeline-icon" />
+                <FaBriefcase className="timeline-icon"/>
               </div>
               <div className="timeline-content">
                 <h2>MLOps Engineer</h2>
@@ -52,9 +52,7 @@ const Experience = () => {
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="timeline">
             <div className="timeline-item">
               <div className="icon-container">
                 <FaBriefcase className="timeline-icon" />
