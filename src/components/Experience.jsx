@@ -29,6 +29,37 @@ const Experience = () => {
                 <FaBriefcase className="timeline-icon" />
               </div>
               <div className="timeline-content">
+                <h2>MLOps Engineer</h2>
+                <h3>
+                  <a
+                    href="https://www.karlstorz.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Karl Storz
+                  </a>
+                </h3>
+                <p className="timeline-date">From March 2025</p>
+                <div className="responsibilities">
+                  <p>Responsibilities include:</p>
+                  <ul>
+                    <li>
+                      Currently working on building a MLOps platform for
+                      Karl Storz to enable the development and deployment of
+                      ML models for the company's products.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline">
+            <div className="timeline-item">
+              <div className="icon-container">
+                <FaBriefcase className="timeline-icon" />
+              </div>
+              <div className="timeline-content">
                 <h2>Machine Learning Engineer</h2>
                 <h3>
                   <a
@@ -39,7 +70,7 @@ const Experience = () => {
                     Validaitor
                   </a>
                 </h3>
-                <p className="timeline-date">January 2024 - Present</p>
+                <p className="timeline-date">January 2024 - December 2024</p>
                 <div className="responsibilities">
                   <p>Responsibilities include:</p>
                   <ul>
