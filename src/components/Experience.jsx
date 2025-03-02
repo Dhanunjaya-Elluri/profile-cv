@@ -39,12 +39,12 @@ const Experience = () => {
                     Karl Storz
                   </a>
                 </h3>
-                <p className="timeline-date">From March 2025</p>
+                <p className="timeline-date">March 2025 - Present</p>
                 <div className="responsibilities">
                   <p>Responsibilities include:</p>
                   <ul>
                     <li>
-                      Currently working on building a MLOps platform for
+                      Currently working on building a Surgical Data & MLOps Platform for
                       Karl Storz to enable the development and deployment of
                       ML models for the company's products.
                     </li>
