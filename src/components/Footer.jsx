@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-info">
-          <p>© {currentYear} Dhanunjaya Elluri. All rights reserved.</p>
+          <p>© {currentYear} Ashish Saini. All rights reserved.</p>
           <p>
             Made with <FaHeart className="heart-icon" /> using React
           </p>

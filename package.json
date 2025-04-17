@@ -1,9 +1,9 @@
 {
-  "name": "profile-cv",
+  "name": "profile-cv-web",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://elluri.in",
+  "homepage": "https://saini.in",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

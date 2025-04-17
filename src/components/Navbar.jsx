@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import { BsSun, BsMoonStars } from "react-icons/bs";
-import { 
-  FaUser, 
-  FaBriefcase, 
-  FaCode, 
-  FaQuoteRight, 
+import {
+  FaUser,
+  FaBriefcase,
+  FaCode,
+  FaQuoteRight,
   FaBlog,
   FaBars,
   FaTimes,
@@ -31,11 +31,11 @@ const Navbar = () => {
   ];
 
   const socialLinks = [
-    { icon: <FaEnvelope />, url: "mailto:dhanunjayet@gmail.com" },
-    { icon: <FaGithub />, url: "https://github.com/Dhanunjaya-Elluri" },
-    { icon: <FaLinkedin />, url: "https://linkedin.com/in/dhanunjaya-elluri" },
-    { icon: <FaXTwitter />, url: "https://twitter.com/dhanunjayet" },
-    { icon: <FaInstagram />, url: "https://instagram.com/dhanunjay_e" },
+    { icon: <FaEnvelope />, url: "mailto:ashishsaini.maiet@gmail.com" },
+    { icon: <FaGithub />, url: "https://github.com/ashishsaini01" },
+    { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/ashish-saini-p/" },
+    { icon: <FaXTwitter />, url: "https://x.com/ashishs26371012" },
+    { icon: <FaInstagram />, url: "https://www.instagram.com/ashishsaini16/" },
   ];
 
   const toggleMenu = () => {
@@ -90,7 +90,7 @@ const Navbar = () => {
               to={item.path}
               className={
                 location.pathname === item.path ||
-                (item.path === "/bio" && location.pathname === "/")
+                  (item.path === "/bio" && location.pathname === "/")
                   ? "active"
                   : ""
               }
