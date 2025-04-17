@@ -10,9 +10,9 @@ import Footer from "./components/Footer";
 import Profile from "./components/Profile";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
-import Blog from "./components/Blog";
-import BlogPost from "./components/BlogPost";
-import Testimonials from "./components/Testimonials";
+//import Blog from "./components/Blog";
+//import BlogPost from "./components/BlogPost";
+//import Testimonials from "./components/Testimonials";
 import { ThemeProvider } from "./context/ThemeContext";
 import "./App.css";
 
@@ -28,9 +28,6 @@ function App() {
               <Route path="/bio" element={<Profile />} />
               <Route path="/experience" element={<Experience />} />
               <Route path="/projects" element={<Projects />} />
-              <Route path="/testimonials" element={<Testimonials />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="*" element={<Navigate to="/bio" replace />} />
             </Routes>
           </main>

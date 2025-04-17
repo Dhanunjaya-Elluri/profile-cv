@@ -5,11 +5,11 @@ import { RiTwitterXFill } from "react-icons/ri";
 const SocialLinks = () => {
   return (
     <div className="social-links">
-      <a href="mailto:dhanunjayet@gmail.com" title="Email">
+      <a href="mailto:ashishsaini.maiet@gmail.com" title="Email">
         <FaEnvelope />
       </a>
       <a
-        href="https://github.com/Dhanunjaya-Elluri"
+        href="https://github.com/ashishsaini01"
         target="_blank"
         rel="noopener noreferrer"
         title="GitHub"
@@ -17,7 +17,7 @@ const SocialLinks = () => {
         <FaGithub />
       </a>
       <a
-        href="https://www.linkedin.com/in/dhanunjaya-elluri/"
+        href="https://www.linkedin.com/in/ashish-saini-p/"
         target="_blank"
         rel="noopener noreferrer"
         title="LinkedIn"
@@ -25,7 +25,7 @@ const SocialLinks = () => {
         <FaLinkedin />
       </a>
       <a
-        href="https://x.com/dhanunjayet"
+        href="https://x.com/ashishs26371012"
         target="_blank"
         rel="noopener noreferrer"
         title="X (Twitter)"
@@ -33,7 +33,7 @@ const SocialLinks = () => {
         <RiTwitterXFill />
       </a>
       <a
-        href="https://www.instagram.com/dhanunjay_e/"
+        href="https://www.instagram.com/ashishsaini16/"
         target="_blank"
         rel="noopener noreferrer"
         title="Instagram"

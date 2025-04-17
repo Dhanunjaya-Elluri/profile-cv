@@ -1,50 +1,41 @@
 import React from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import narwhalsLogo from "./images/narwhals.png";
-import littleBookOfMLMetricsLogo from "./images/nannyml.png";
 import tuLogo from "./images/tu-logo.png";
 
 const Projects = () => {
   const projects = [
     {
-      title: "Narwhals",
-      icon: <img src={narwhalsLogo} alt="Narwhals" className="project-icon" />,
-      description:
-        "Narwhals is an open-source Python library that provides a compatibility layer between dataframe libraries like Pandas, PyArrow, Polars, Modin, etc.",
-      githubUrl: "https://github.com/narwhals-dev/narwhals",
-      contributions: [
-        "Contributed to the core narwhals library",
-        "Added new feature `var` to calculate variance to this library",
-        "Improved documentation and examples",
-      ],
-    },
-    {
-      title: "The Little Book of ML Metrics",
-      icon: (
-        <img
-          src={littleBookOfMLMetricsLogo}
-          alt="The Little Book of ML Metrics"
-          className="project-icon"
-        />
-      ),
-      description:
-        "NannyML's The Little Book of ML Metrics is an open-source book that provides a comprehensive guide to machine learning metrics.",
-      githubUrl: "https://github.com/nannyML/the-little-book-of-ml-metrics",
-      contributions: [
-        "Contributed to the book by adding new chapters and metrics on various machine learning metrics",
-        "Added new metrics and formulas including graphs to the book",
-      ],
-    },
-    {
-      title: "Transformers for Quantized Time Series Forecasting",
+      title: " Enhancing uncertainty estimation and outlier detection.",
       icon: <img src={tuLogo} alt="TU Logo" className="project-icon" />,
       description:
-        "Master's Thesis on Transformers for Quantized Time Series Forecasting",
-      githubUrl: "https://github.com/Dhanunjaya-Elluri/master-thesis",
+        "Master's Thesis on Enhancing uncertainty estimation and outlier detection through confidence calibration for out-of-distribution data",
+      githubUrl: "https://github.com/ashishsaini01/master-thesis",
       contributions: [
-        "Explored SAX, Kernel-SAX & Quantile methods for time series quantization",
-        "Implemented multiple Transformer variants for time series forecasting",
-        "Achieved 30% performance improvement in training & inference",
+        "Explored Uncertainty Estimation and Outlier Expousure methods for improving the performance of the model",
+        "Implemented Decomposed confidence architecture for out-of-distribution detection",
+        "Achieved 20% reduction in Soft-Binned Expected Calibration Error (SB-ECE)",
+      ],
+    },
+    {
+      title: "Anomaly Detection for Reidentification",
+      icon: <img src={tuLogo} alt="TU Logo" className="project-icon" />,
+      description:
+        "Applied unsupervised anomaly detection techniques for reidentification of pallet blocks",
+      githubUrl: "https://github.com/ashishsaini01/Anomaly_detection_using_autoencoders",
+      contributions: [
+        "Contributed to the ongoing project by impelmenting Auto-encoder architecutre with SSIM loss function",
+        "Achieved 20% improvement in detection accuracy",
+        "Implemented a high-confidence object detection model to identify logistic objects"
+      ],
+    },
+    {
+      title: "Anomaly Detection on Time Series Data",
+      icon: <img src={tuLogo} alt="TU Logo" className="project-icon" />,
+      description:
+        "Caes Study on Time series processing, anomaly detection and explanation with focus on Energy consumption data",
+      contributions: [
+        "Explored DGHL and MCMC methods for time series anomaly dectection",
+        "Detected anomolies in energy consumption data with 70% accuracy",
       ],
     },
   ];

@@ -15,7 +15,7 @@ const Profile = () => {
       icon: <FaBrain />,
       title: "ML Expertise",
       description:
-        "Specialized in Large Language Models and MLOps with focus on AI compliance and safety",
+        "Specialized in Data Driven Models and MLOps with focus on AI compliance and safety",
     },
     {
       icon: <FaGraduationCap />,
@@ -27,7 +27,7 @@ const Profile = () => {
       icon: <FaLaptopCode />,
       title: "Tech Stack",
       description:
-        "Python, PyTorch, AWS, Azure, Docker, Kubernetes, and modern MLOps tools",
+        "Python, PyTorch, AWS, Azure, Docker, Power BI, and modern MLOps tools",
     },
     {
       icon: <FaAward />,
@@ -42,9 +42,9 @@ const Profile = () => {
       <div className="profile-content">
         <div className="intro">
           <div className="mobile-profile-image">
-            <img 
-              src={profileImage} 
-              alt="Dhanunjaya Elluri" 
+            <img
+              src={profileImage}
+              alt="Ashish Saini"
               loading="eager"
             />
           </div>
@@ -52,30 +52,39 @@ const Profile = () => {
             <div className="intro-header">
               <h1>
                 <span className="wave">👋</span>
-                Hey, I'm Dhanunjaya Elluri
+                Hey, I'm Ashish Saini
               </h1>
               <ProfileVisits />
             </div>
           </div>
         </div>
         <h2>
-          Machine Learning Engineer crafting AI solutions that are both powerful
-          and compliant.
+          A data-driven thinker who loves to built smart, scalable solutions for
+          real-world problems - from pipelins to predictions
         </h2>
 
         <p className="current-work">
-          With a passion for responsible AI development, I specialize in
-          building and deploying Large Language Models at scale. Currently,
-          I&apos;m a Machine Learning Engineer at{" "}
+          I&apos;m a machine learning enthusiast with a strong interest in building AI systems that
+          are not just powerful, but also responsible and impactful. I graduated with a Master’s in
+          Data Science from{" "}
           <a
-            href="https://validaitor.com/"
+            href="https://www.tu-dortmund.de/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Validaitor
+            TU Dortmund
           </a>{" "}
-          where I develop solutions to make LLMs compliant with the EU AI Act,
-          ensuring they meet both technical excellence and regulatory standards.
+          and recently completed an intenship at{" "}
+          <a
+            href="https://www.munichre.com/de.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Munich Re
+          </a>{" "}
+          where I worked on real-world AI applications in the insurance domain.
+          Now, I’m actively looking for opportunities where I can apply my skills, keep learning,
+          and contribute to meaningful, data-driven projects.
         </p>
 
         <div className="highlights-grid">
@@ -93,9 +102,9 @@ const Profile = () => {
 
       <div className="profile-right">
         <div className="profile-image">
-          <img 
-            src={profileImage} 
-            alt="Dhanunjaya Elluri" 
+          <img
+            src={profileImage}
+            alt="Ashish Saini"
             loading="eager"
           />
         </div>

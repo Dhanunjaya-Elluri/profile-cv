@@ -1,7 +1,7 @@
 import React from "react";
 import { FaBriefcase, FaGraduationCap, FaDownload } from "react-icons/fa";
 import Skills from "./Skills";
-import resumePDF from "./resume/Dhanunjaya_CV_DE.pdf";
+import resumePDF from "./resume/Ashish_CV_.pdf";
 
 const Experience = () => {
   return (
@@ -9,7 +9,7 @@ const Experience = () => {
       <div className="resume-download">
         <a
           href={resumePDF}
-          download="Dhanunjaya_CV_DE.pdf"
+          download="Ashish_CV_.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="download-button"
@@ -26,27 +26,34 @@ const Experience = () => {
           <div className="timeline">
             <div className="timeline-item">
               <div className="icon-container">
-                <FaBriefcase className="timeline-icon"/>
+                <FaBriefcase className="timeline-icon" />
               </div>
               <div className="timeline-content">
-                <h2>MLOps Engineer</h2>
+                <h2>Data Managment and Automation Intern</h2>
                 <h3>
                   <a
-                    href="https://www.karlstorz.com"
+                    href="https://www.munichre.com/de.html"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Karl Storz
+                    Munich Re
                   </a>
                 </h3>
-                <p className="timeline-date">March 2025 - Present</p>
+                <p className="timeline-date">June 2024 - Feb 2025</p>
                 <div className="responsibilities">
                   <p>Responsibilities include:</p>
                   <ul>
                     <li>
-                      Currently working on building a Surgical Data & MLOps Platform for
-                      Karl Storz to enable the development and deployment of
-                      ML models for the company's products.
+                      Transformed and interpreted structured and unstructured data for actuarial analysis,
+                      leading to more informed and data-driven decision-making processes.
+                    </li>
+                    <li>
+                      Ensured accurate and comprehensive data collection for client data pools, directly contributing to the precision of
+                      analysis and reporting.
+                    </li>
+                    <li>
+                      Actively collaborating in automating the data preparation process, streamlining workflows, and enhancing overall
+                      productivity.
                     </li>
                   </ul>
                 </div>
@@ -58,14 +65,14 @@ const Experience = () => {
                 <FaBriefcase className="timeline-icon" />
               </div>
               <div className="timeline-content">
-                <h2>Machine Learning Engineer</h2>
+                <h2>Data Analyst Intern</h2>
                 <h3>
                   <a
-                    href="https://validaitor.com"
+                    href="https://www.munichre.com/de.html"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Validaitor
+                    Munich Re
                   </a>
                 </h3>
                 <p className="timeline-date">January 2024 - December 2024</p>
