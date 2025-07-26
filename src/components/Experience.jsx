@@ -36,7 +36,7 @@ const Experience = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Karl Storz
+                    Karl STORZ SE & Co. KG
                   </a>
                 </h3>
                 <p className="timeline-date">March 2025 - Present</p>
@@ -44,9 +44,19 @@ const Experience = () => {
                   <p>Responsibilities include:</p>
                   <ul>
                     <li>
-                      Currently working on building a Surgical Data & MLOps Platform for
-                      Karl Storz to enable the development and deployment of
-                      ML models for the company's products.
+                      Contributed to the development of Surgical Data Platform (SDP), ingesting video data from hospitals via DataLogger devices and WebUpload tools; orchestrated complex ETL workflows using Apache Airflow to extract frames and enrich metadata (e.g., ICG signals) via Azure ML inference endpoints.
+                    </li>
+                    <li>
+                      Developed and maintained a robust centralized MLOps pipelines for the SDP, ensuring seamless integration of ML models into production environments, enhancing the platform's capabilities in real-time surgical data analysis.
+                    </li>
+                    <li>
+                      Deployed and managed Apache Airflow on Azure Kubernetes Service (AKS) to run scalable, production-grade data pipelines for video and metadata processing.
+                    </li>
+                    <li>
+                      Built a CLI-based internal ml-utils package to streamline frame-based data handling for data scientists, significantly reducing onboarding time and simplifying large-scale data flows.
+                    </li>
+                    <li>
+                      Co-led infrastructure management for both Data and ML platforms, aligning closely with Security teams to meet enterprise compliance standards.
                     </li>
                   </ul>
                 </div>
